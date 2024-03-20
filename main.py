@@ -1,6 +1,9 @@
 def encode(password):
     return ''.join(str((int(digit) + 3) % 10) for digit in password)
 
+#Completed by Conner Layne
+def decode(password):
+    return ''.join(str((int(digit) - 3)%10)for digit in password)
 
 def main():
     stored_encoded_password = ''
@@ -17,8 +20,7 @@ def main():
                 print("Invalid input. Please ensure your password is 8 digits long and only contains numbers.")
 
         elif choice == '2':
-            # Placeholder for the decode function that my partner will implement.
-            print("Decode functionality will be implemented by my partner.")
+            print(f'The encoded password is {stored_encoded_password}, and the original password is {decode(stored_encoded_password)}.')
 
         elif choice == '3':
             break
